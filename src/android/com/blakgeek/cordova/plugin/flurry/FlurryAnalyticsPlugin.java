@@ -51,15 +51,15 @@ public class FlurryAnalyticsPlugin extends CordovaPlugin implements FlurryAgentL
                             case "endTimedEvent":
                                 endTimedEvent(args, callbackContext);
                                 break;
-                            case "logPageView":
+                            /*case "logPageView":
                                 logPageView(callbackContext);
-                                break;
+                                break;*/
                             case "logError":
                                 logError(args, callbackContext);
                                 break;
-                            case "setLocation":
+                            /*case "setLocation":
                                 setLocation(args, callbackContext);
-                                break;
+                                break;*/
                             case "setUserId":
                                 setUserId(args, callbackContext);
                                 break;
@@ -90,7 +90,7 @@ public class FlurryAnalyticsPlugin extends CordovaPlugin implements FlurryAgentL
         }
     }
 
-    private void setLocation(JSONArray args, CallbackContext callbackContext) throws JSONException {
+    /*private void setLocation(JSONArray args, CallbackContext callbackContext) throws JSONException {
 
         float latitude = (float) args.getDouble(0);
         float longitude = (float) args.getDouble(1);
@@ -101,7 +101,7 @@ public class FlurryAnalyticsPlugin extends CordovaPlugin implements FlurryAgentL
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
         }
-    }
+    }*/
 
     private void logError(JSONArray args, CallbackContext callbackContext) throws JSONException {
 
@@ -113,7 +113,7 @@ public class FlurryAnalyticsPlugin extends CordovaPlugin implements FlurryAgentL
         }
     }
 
-    private void logPageView(CallbackContext callbackContext) {
+    /*private void logPageView(CallbackContext callbackContext) {
 
         try {
             FlurryAgent.onPageView();
@@ -121,7 +121,7 @@ public class FlurryAnalyticsPlugin extends CordovaPlugin implements FlurryAgentL
         } catch (Exception e) {
             callbackContext.error(e.getMessage());
         }
-    }
+    }*/
 
     private void endTimedEvent(JSONArray args, CallbackContext callbackContext) throws JSONException {
 
